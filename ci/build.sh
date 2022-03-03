@@ -6,10 +6,12 @@ set -x
 echo "Building for $BUILD_TARGET"
 
 export BUILD_PATH=./Builds/$BUILD_TARGET/
+pwd
+ls
 mkdir -p $BUILD_PATH
 
 ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/unity/Editor/Unity} \
-  -projectPath $(pwd) \
+  -projectPath testing\ unity\ builds/ \
   -quit \
   -batchmode \
   -buildTarget $BUILD_TARGET \

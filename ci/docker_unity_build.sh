@@ -12,4 +12,3 @@ docker run \
   -v $(pwd):/project/ \
   $IMAGE_NAME \
   /bin/bash -c "/project/ci/unity_license.sh && /project/ci/build.sh"
-view raw
